@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: apollo-configservice
+  profiles:
+    active: github
+
+ctrip:
+  appid: 100003171
+  
+server:
+  port: 8060
+  
+logging:
+  file: /opt/logs/apollo/apollo-configservice.log
