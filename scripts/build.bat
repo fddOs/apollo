@@ -25,11 +25,11 @@ cd "%~dp0"
 cd ..
 
 rem package config-service and admin-service
-echo "==== starting to build config-service and admin-service ===="
+rem echo "==== starting to build config-service and admin-service ===="
 
-call mvn clean package -DskipTests -pl apollo-configservice,apollo-adminservice -am -Dapollo_profile=github -Dspring_datasource_url=%apollo_config_db_url% -Dspring_datasource_username=%apollo_config_db_username% -Dspring_datasource_password=%apollo_config_db_password%
+rem call mvn clean package -DskipTests -pl apollo-configservice,apollo-adminservice -am -Dapollo_profile=github -Dspring_datasource_url=%apollo_config_db_url% -Dspring_datasource_username=%apollo_config_db_username% -Dspring_datasource_password=%apollo_config_db_password%
 
-echo "==== building config-service and admin-service finished ===="
+rem echo "==== building config-service and admin-service finished ===="
 
 echo "==== starting to build portal ===="
 
