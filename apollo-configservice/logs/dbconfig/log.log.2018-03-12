@@ -1,0 +1,43 @@
+2018-03-12 16:20:17  [ http-nio-8080-exec-7:0 ] - [ DEBUG ]  Couldn't find template in cache for "eureka/status.ftl"("zh_CN", UTF-8, parsed); will try to load it.
+  2018-03-12 16:20:17  [ http-nio-8080-exec-7:4 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("eureka/status_zh_CN.ftl"): Not found
+  2018-03-12 16:20:17  [ http-nio-8080-exec-7:6 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("eureka/status_zh.ftl"): Not found
+  2018-03-12 16:20:17  [ http-nio-8080-exec-7:7 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("eureka/status.ftl"): Found
+  2018-03-12 16:20:17  [ http-nio-8080-exec-7:8 ] - [ DEBUG ]  Loading template for "eureka/status.ftl"("zh_CN", UTF-8, parsed) from "class path resource [templates/eureka/status.ftl]"
+  2018-03-12 16:20:17  [ http-nio-8080-exec-7:169 ] - [ DEBUG ]  "eureka/status.ftl"("zh_CN", UTF-8, parsed) cached copy not yet stale; using cached.
+  2018-03-12 16:20:17  [ http-nio-8080-exec-7:172 ] - [ DEBUG ]  "eureka/status.ftl"("zh_CN", UTF-8, parsed) cached copy not yet stale; using cached.
+  2018-03-12 16:20:17  [ http-nio-8080-exec-7:176 ] - [ DEBUG ]  Couldn't find template in cache for "spring.ftl"("zh_CN", UTF-8, parsed); will try to load it.
+  2018-03-12 16:20:17  [ http-nio-8080-exec-7:177 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("spring_zh_CN.ftl"): Not found
+  2018-03-12 16:20:17  [ http-nio-8080-exec-7:178 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("spring_zh.ftl"): Not found
+  2018-03-12 16:20:17  [ http-nio-8080-exec-7:179 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("spring.ftl"): Found
+  2018-03-12 16:20:17  [ http-nio-8080-exec-7:179 ] - [ DEBUG ]  Loading template for "spring.ftl"("zh_CN", UTF-8, parsed) from "jar:file:/F:/.m2/repository/org/springframework/spring-webmvc/4.2.8.RELEASE/spring-webmvc-4.2.8.RELEASE.jar!/org/springframework/web/servlet/view/freemarker/spring.ftl"
+  2018-03-12 16:20:17  [ http-nio-8080-exec-7:236 ] - [ DEBUG ]  Couldn't find template in cache for "eureka/header.ftl"("zh_CN", UTF-8, parsed); will try to load it.
+  2018-03-12 16:20:17  [ http-nio-8080-exec-7:236 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("eureka/header_zh_CN.ftl"): Not found
+  2018-03-12 16:20:17  [ http-nio-8080-exec-7:237 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("eureka/header_zh.ftl"): Not found
+  2018-03-12 16:20:17  [ http-nio-8080-exec-7:238 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("eureka/header.ftl"): Found
+  2018-03-12 16:20:17  [ http-nio-8080-exec-7:238 ] - [ DEBUG ]  Loading template for "eureka/header.ftl"("zh_CN", UTF-8, parsed) from "class path resource [templates/eureka/header.ftl]"
+  2018-03-12 16:20:17  [ http-nio-8080-exec-7:240 ] - [ DEBUG ]  "spring.ftl"("zh_CN", UTF-8, parsed) cached copy not yet stale; using cached.
+  2018-03-12 16:20:17  [ http-nio-8080-exec-7:242 ] - [ DEBUG ]  Couldn't find template in cache for "eureka/navbar.ftl"("zh_CN", UTF-8, parsed); will try to load it.
+  2018-03-12 16:20:17  [ http-nio-8080-exec-7:243 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("eureka/navbar_zh_CN.ftl"): Not found
+  2018-03-12 16:20:17  [ http-nio-8080-exec-7:243 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("eureka/navbar_zh.ftl"): Not found
+  2018-03-12 16:20:17  [ http-nio-8080-exec-7:244 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("eureka/navbar.ftl"): Found
+  2018-03-12 16:20:17  [ http-nio-8080-exec-7:244 ] - [ DEBUG ]  Loading template for "eureka/navbar.ftl"("zh_CN", UTF-8, parsed) from "class path resource [templates/eureka/navbar.ftl]"
+  2018-03-12 16:20:33  [ http-nio-8080-exec-4:15580 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("eureka/status_zh_CN.ftl"): Not found
+  2018-03-12 16:20:33  [ http-nio-8080-exec-4:15582 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("eureka/status_zh.ftl"): Not found
+  2018-03-12 16:20:33  [ http-nio-8080-exec-4:15582 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("eureka/status.ftl"): Found
+  2018-03-12 16:20:33  [ http-nio-8080-exec-4:15584 ] - [ DEBUG ]  "eureka/status.ftl"("zh_CN", UTF-8, parsed): using cached since class path resource [templates/eureka/status.ftl] hasn't changed.
+  2018-03-12 16:20:33  [ http-nio-8080-exec-4:15585 ] - [ DEBUG ]  "eureka/status.ftl"("zh_CN", UTF-8, parsed) cached copy not yet stale; using cached.
+  2018-03-12 16:20:33  [ http-nio-8080-exec-4:15587 ] - [ DEBUG ]  "eureka/status.ftl"("zh_CN", UTF-8, parsed) cached copy not yet stale; using cached.
+  2018-03-12 16:20:33  [ http-nio-8080-exec-4:15588 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("spring_zh_CN.ftl"): Not found
+  2018-03-12 16:20:33  [ http-nio-8080-exec-4:15589 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("spring_zh.ftl"): Not found
+  2018-03-12 16:20:33  [ http-nio-8080-exec-4:15589 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("spring.ftl"): Found
+  2018-03-12 16:20:33  [ http-nio-8080-exec-4:15590 ] - [ DEBUG ]  "spring.ftl"("zh_CN", UTF-8, parsed): using cached since jar:file:/F:/.m2/repository/org/springframework/spring-webmvc/4.2.8.RELEASE/spring-webmvc-4.2.8.RELEASE.jar!/org/springframework/web/servlet/view/freemarker/spring.ftl hasn't changed.
+  2018-03-12 16:20:33  [ http-nio-8080-exec-4:15591 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("eureka/header_zh_CN.ftl"): Not found
+  2018-03-12 16:20:33  [ http-nio-8080-exec-4:15591 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("eureka/header_zh.ftl"): Not found
+  2018-03-12 16:20:33  [ http-nio-8080-exec-4:15592 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("eureka/header.ftl"): Found
+  2018-03-12 16:20:33  [ http-nio-8080-exec-4:15593 ] - [ DEBUG ]  "eureka/header.ftl"("zh_CN", UTF-8, parsed): using cached since class path resource [templates/eureka/header.ftl] hasn't changed.
+  2018-03-12 16:20:33  [ http-nio-8080-exec-4:15593 ] - [ DEBUG ]  "spring.ftl"("zh_CN", UTF-8, parsed) cached copy not yet stale; using cached.
+  2018-03-12 16:20:33  [ http-nio-8080-exec-4:15594 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("eureka/navbar_zh_CN.ftl"): Not found
+  2018-03-12 16:20:33  [ http-nio-8080-exec-4:15595 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("eureka/navbar_zh.ftl"): Not found
+  2018-03-12 16:20:33  [ http-nio-8080-exec-4:15595 ] - [ DEBUG ]  TemplateLoader.findTemplateSource("eureka/navbar.ftl"): Found
+  2018-03-12 16:20:33  [ http-nio-8080-exec-4:15596 ] - [ DEBUG ]  "eureka/navbar.ftl"("zh_CN", UTF-8, parsed): using cached since class path resource [templates/eureka/navbar.ftl] hasn't changed.
+  

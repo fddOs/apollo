@@ -1,4 +1,4 @@
-package com.ctrip.framework.apollo.common.datasource;
+/*package com.ctrip.framework.apollo.common.datasource;
 
 import java.sql.SQLException;
 
@@ -20,12 +20,12 @@ import com.ehai.dbconfig.dbinterface.IDBConfigUpdateListener;
 import com.ehai.dbconfig.model.DBInfo;
 import com.ehai.dbconfig.model.DBResult;
 
-/**
+*//**
  * druid 数据连接池配置
  * 
  * @author 18834
  *
- */
+ *//*
 @Component
 public class DruidConfigution {
 	private static final Logger log = LoggerFactory.getLogger(DruidConfigution.class);
@@ -75,20 +75,20 @@ public class DruidConfigution {
 		if (dbResult != null && dbResult.isSucess()) {
 			DBInfo dbInfo = dbResult.getDbInfo();
 			initDataBase(datasource, dbInfo);
-			log.info("获取数据库连接信息成功");
+			log.info("获取数据库连接信息成功"+dbInfo.toString());
 		} else {
 			log.info("获取数据库连接信息失败 {}", dbResult);
 		}
 		return datasource;
 	}
 
-	/**
+	*//**
 	 * 初始化数据库连接池
 	 * 
 	 * @param dataDruidSource
 	 * @param dbInfo
 	 *            1433;DatabaseName=
-	 */
+	 *//*
 	private void initDataBase(DruidDataSource dataDruidSource, DBInfo dbInfo) {
 		if (dbInfo != null) {
 			dataDruidSource.setDriverClassName("com.mysql.jdbc.Driver");
@@ -100,3 +100,4 @@ public class DruidConfigution {
 	}
 
 }
+*/

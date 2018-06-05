@@ -37,6 +37,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import static com.ctrip.framework.apollo.common.utils.RequestPrecondition.checkModel;
 
@@ -60,17 +61,36 @@ public class NamespaceController {
   @Autowired
   private PortalConfig portalConfig;
 
-
   @RequestMapping(value = "/appnamespaces/public", method = RequestMethod.GET)
   public List<AppNamespace> findPublicAppNamespaces() {
     return appNamespaceService.findPublicAppNamespaces();
   }
 
-  @RequestMapping(value = "/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces", method = RequestMethod.GET)
+  @RequestMapping(value = "/apps/{appId}/envs/{env}/clusters/{clusterName}/userId/{userId}/namespaces", method = RequestMethod.GET)
   public List<NamespaceBO> findNamespaces(@PathVariable String appId, @PathVariable String env,
-                                          @PathVariable String clusterName) {
-
-    return namespaceService.findNamespaceBOs(appId, Env.valueOf(env), clusterName);
+                                          @PathVariable String clusterName, @PathVariable String userId) {
+	List<String> privateUsers = portalConfig.privateUser();
+	List<String> prodPublicUsers = portalConfig.prodPublicUser();
+	List<String> testPublicUsers = portalConfig.testPublicUser();
+	List<String> developers = portalConfig.developer();
+	List<NamespaceBO> list = namespaceService.findNamespaceBOs(appId, Env.valueOf(env), clusterName);
+	if("dev".equalsIgnoreCase(env)&&developers.contains(userId)){
+		//开发环境开发账户可以看到所有配置
+		return list;
+	}
+	if(privateUsers.contains(userId)){
+		//无法看到私有配置的账户
+		list = list.stream().filter(NamespaceBO::isPublic).collect(Collectors.toList());
+	}
+	if("PRO".equalsIgnoreCase(env)&&!prodPublicUsers.contains(userId)){
+		//线上环境不能看到公有配置的账户
+		list = list.stream().filter(namespaceBO->!namespaceBO.isPublic()).collect(Collectors.toList());
+	}
+	if(!"PRO".equalsIgnoreCase(env)&&!testPublicUsers.contains(userId)){
+		//test环境不能看到公有配置的账户
+		list = list.stream().filter(namespaceBO->!namespaceBO.isPublic()).collect(Collectors.toList());
+	}
+    return list;
   }
 
   @RequestMapping(value = "/apps/{appId}/envs/{env}/clusters/{clusterName}/namespaces/{namespaceName:.+}", method = RequestMethod.GET)

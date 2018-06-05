@@ -5,7 +5,7 @@ import com.ctrip.framework.apollo.common.condition.ConditionalOnMissingProfile;
 import com.ctrip.framework.apollo.portal.spi.EmailService;
 import com.ctrip.framework.apollo.portal.spi.ctrip.CtripEmailService;
 import com.ctrip.framework.apollo.portal.spi.ctrip.CtripEmailRequestBuilder;
-import com.ctrip.framework.apollo.portal.spi.defaultimpl.DefaultEmailService;
+import com.ctrip.framework.apollo.portal.spi.defaultimpl.EHIEmailService;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
@@ -42,7 +42,8 @@ public class EmailConfiguration {
     @Bean
     @ConditionalOnMissingBean(EmailService.class)
     public EmailService defaultEmailService() {
-      return new DefaultEmailService();
+      System.err.println("EHIEmailService");
+      return new EHIEmailService();
     }
   }
 

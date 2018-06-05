@@ -100,10 +100,12 @@ function controller($rootScope, $scope, toastr, AppUtil, EventManager, ConfigSer
         if ($rootScope.pageContext.env == '') {
             return;
         }
-
+        console.log($rootScope.pageContext.userId);
+        console.log($scope.currentUser);
         ConfigService.load_all_namespaces($rootScope.pageContext.appId,
                                           $rootScope.pageContext.env,
-                                          $rootScope.pageContext.clusterName).then(
+                                          $rootScope.pageContext.clusterName,
+                                          $scope.currentUser).then(
             function (result) {
 
                 $scope.namespaces = result;

@@ -14,10 +14,10 @@ rem meta server url, different environments should have different meta server ad
 set dev_meta="http://192.168.9.164:8080"
 set fat_meta="http://192.168.5.90:8080"
 set uat_meta="http://172.21.11.73:8080"
-set pro_meta="http://apolloconfig.1hai.cn"
+rem set pro_meta="http://apolloconfig.1hai.cn"
 
-set META_SERVERS_OPTS=-Dpro_meta=%pro_meta% -Ddev_meta=%dev_meta% -Dfat_meta=%fat_meta% -Duat_meta=%uat_meta%
-
+set META_SERVERS_OPTS=-Ddev_meta=%dev_meta% -Dfat_meta=%fat_meta% -Duat_meta=%uat_meta%
+rem -Dpro_meta=%pro_meta% 
 rem =============== Please do not modify the following content =============== 
 rem go to script directory
 cd "%~dp0"
@@ -39,7 +39,7 @@ echo "==== building portal finished ===="
 
 echo "==== starting to build client ===="
 
-call mvn clean deploy -DskipTests -pl apollo-client -am %META_SERVERS_OPTS%
+call mvn clean package -DskipTests -pl apollo-client -am %META_SERVERS_OPTS%
 
 echo "==== building client finished ===="
 

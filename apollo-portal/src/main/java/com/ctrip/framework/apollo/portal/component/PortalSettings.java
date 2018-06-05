@@ -45,7 +45,10 @@ public class PortalSettings {
 
   @PostConstruct
   private void postConstruct() {
-
+	System.err.println(portalConfig.prodPublicUser());
+	System.err.println(portalConfig.testPublicUser());
+	System.err.println(portalConfig.privateUser());
+	System.err.println(portalConfig.developer());
     allEnvs = portalConfig.portalSupportedEnvs();
 
     for (Env env : allEnvs) {

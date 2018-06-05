@@ -13,7 +13,7 @@ appService.service("ConfigService", ['$resource', '$q', function ($resource, $q)
         load_all_namespaces: {
             method: 'GET',
             isArray: true,
-            url: '/apps/:appId/envs/:env/clusters/:clusterName/namespaces'
+            url: '/apps/:appId/envs/:env/clusters/:clusterName/userId/:userId/namespaces'
         },
         find_items: {
             method: 'GET',
@@ -77,12 +77,13 @@ appService.service("ConfigService", ['$resource', '$q', function ($resource, $q)
             });
             return d.promise;
         },
-        load_all_namespaces: function (appId, env, clusterName) {
+        load_all_namespaces: function (appId, env, clusterName, userId) {
             var d = $q.defer();
             config_source.load_all_namespaces({
                                                   appId: appId,
                                                   env: env,
-                                                  clusterName: clusterName
+                                                  clusterName: clusterName,
+                                                  userId: userId
                                               }, function (result) {
                 d.resolve(result);
             }, function (result) {

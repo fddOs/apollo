@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Type;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
@@ -223,6 +224,22 @@ public class PortalConfig extends RefreshableConfig {
 
   public String hermesServerAddress() {
     return getValue("hermes.server.address");
+  }
+  
+  public List<String> prodPublicUser() {
+	  return Arrays.asList(getArrayProperty("apollo.auth.prodPublicUser", null));
+  }
+  public List<String> testPublicUser() {
+	  return Arrays.asList(getArrayProperty("apollo.auth.testPublicUser", null));
+  }
+  public List<String> privateUser() {
+	  return Arrays.asList(getArrayProperty("apollo.auth.privateUser", null));
+  }
+  public List<String> developer() {
+	  return Arrays.asList(getArrayProperty("apollo.auth.developer", null));
+  }
+  public String emailUrl() {
+	  return getValue("emailUrl");
   }
 
 }
